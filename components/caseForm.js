@@ -1,15 +1,16 @@
 import React from "react";
-import Head from "next/head";
-import Nav from "../components/nav";
 import {
   FormControl,
   InputLabel,
   Input,
-  FormHelperText
+  FormHelperText,
+  FormControlLabel
 } from "@material-ui/core";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
 
 // Client name, DOB, case #, 3 others undertim
-const Home = () => (
+const caseForm = () => (
   <div>
     <FormControl>
       <InputLabel htmlFor="my-input">Email address</InputLabel>
@@ -18,13 +19,20 @@ const Home = () => (
         We'll never share your email.
       </FormHelperText>
     </FormControl>
-    <FormControl>
+    {/* <FormControl>
       <InputLabel htmlFor="my-input">Email address</InputLabel>
-      <Input id="my-input" aria-describedby="my-helper-text" />
-      <FormHelperText id="my-helper-text">
-        We'll never share your email.
-      </FormHelperText>
-    </FormControl>
+      <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+          <FormControlLabel value="female" control={<Radio />} label="Female" />
+          <FormControlLabel value="male" control={<Radio />} label="Male" />
+          <FormControlLabel value="other" control={<Radio />} label="Other" />
+          <FormControlLabel
+            value="disabled"
+            disabled
+            control={<Radio />}
+            label="(Disabled option)"
+          />
+        </RadioGroup>
+    </FormControl> */}
 
     <style jsx>{`
       .hero {
@@ -75,4 +83,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default caseForm;
